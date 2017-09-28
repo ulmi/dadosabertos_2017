@@ -1,6 +1,6 @@
 # proj_dadosabertos_2017
 
-[](/outros/img.jpg)
+![](/outros/img.jpg)
 
 O projecto do evento [dados abertos, em Águeda](http://sig.cm-agueda.pt/drupal/node/266)
 
