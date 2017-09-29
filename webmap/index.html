@@ -16,7 +16,7 @@
             margin: 0;
         }
         </style>
-        <title></title>
+        <title>Oficina de dados abertos - BAGA</title>
     </head>
     <body>
         <div id="map">
@@ -515,6 +515,16 @@
         ]});
         bounds_group.addLayer(layer_PontosBAGASNIRH_5);
         map.addLayer(layer_PontosBAGASNIRH_5);
+        var title = new L.Control();
+        title.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info');
+            this.update();
+            return this._div;
+        };
+        title.update = function () {
+            this._div.innerHTML = '<h2>Oficina de dados abertos - BAGA</h2>';
+        };
+        title.addTo(map);
         var baseMaps = {};
         L.control.layers(baseMaps,{'<img src="legend/PontosBAGASNIRH_5.png" /> Pontos BAGA / SNIRH': layer_PontosBAGASNIRH_5,'Velocidade média do vento (km)<br /><table><tr><td style="text-align: center;"><img src="legend/Velocidademdiadoventokm_4_0010280.png" /></td><td> 0.01 - 0.28 </td></tr><tr><td style="text-align: center;"><img src="legend/Velocidademdiadoventokm_4_0280451.png" /></td><td> 0.28 - 0.45 </td></tr><tr><td style="text-align: center;"><img src="legend/Velocidademdiadoventokm_4_0450582.png" /></td><td> 0.45 - 0.58 </td></tr><tr><td style="text-align: center;"><img src="legend/Velocidademdiadoventokm_4_0580803.png" /></td><td> 0.58 - 0.80 </td></tr><tr><td style="text-align: center;"><img src="legend/Velocidademdiadoventokm_4_0801134.png" /></td><td> 0.80 - 1.13 </td></tr></table>': layer_Velocidademdiadoventokm_4,'Temperatura média ºC<br /><table><tr><td style="text-align: center;"><img src="legend/TemperaturamdiaC_3_1861990.png" /></td><td> 18.6 - 19.9 </td></tr><tr><td style="text-align: center;"><img src="legend/TemperaturamdiaC_3_1992091.png" /></td><td> 19.9 - 20.9 </td></tr><tr><td style="text-align: center;"><img src="legend/TemperaturamdiaC_3_2092242.png" /></td><td> 20.9 - 22.4 </td></tr><tr><td style="text-align: center;"><img src="legend/TemperaturamdiaC_3_2242513.png" /></td><td> 22.4 - 25.1 </td></tr><tr><td style="text-align: center;"><img src="legend/TemperaturamdiaC_3_2512894.png" /></td><td> 25.1 - 28.9 </td></tr></table>': layer_TemperaturamdiaC_3,'Precipitação média (mm)<br /><table><tr><td style="text-align: center;"><img src="legend/Precipitaomdiamm_2_000000600.png" /></td><td> 0.000 - 0.060 </td></tr><tr><td style="text-align: center;"><img src="legend/Precipitaomdiamm_2_006001091.png" /></td><td> 0.060 - 0.109 </td></tr><tr><td style="text-align: center;"><img src="legend/Precipitaomdiamm_2_010901532.png" /></td><td> 0.109 - 0.153 </td></tr><tr><td style="text-align: center;"><img src="legend/Precipitaomdiamm_2_015302163.png" /></td><td> 0.153 - 0.216 </td></tr><tr><td style="text-align: center;"><img src="legend/Precipitaomdiamm_2_021602984.png" /></td><td> 0.216 - 0.298 </td></tr></table>': layer_Precipitaomdiamm_2,'Humidade Relativa média (%)<br /><table><tr><td style="text-align: center;"><img src="legend/HumidadeRelativamdia_1_4545520.png" /></td><td> 45.4 - 55.2 </td></tr><tr><td style="text-align: center;"><img src="legend/HumidadeRelativamdia_1_5526141.png" /></td><td> 55.2 - 61.4 </td></tr><tr><td style="text-align: center;"><img src="legend/HumidadeRelativamdia_1_6146502.png" /></td><td> 61.4 - 65.0 </td></tr><tr><td style="text-align: center;"><img src="legend/HumidadeRelativamdia_1_6506903.png" /></td><td> 65.0 - 69.0 </td></tr><tr><td style="text-align: center;"><img src="legend/HumidadeRelativamdia_1_6907774.png" /></td><td> 69.0 - 77.7 </td></tr></table>': layer_HumidadeRelativamdia_1,'<img src="legend/concelho_0.png" /> concelho': layer_concelho_0,},{collapsed:false}).addTo(map);
         setBounds();
