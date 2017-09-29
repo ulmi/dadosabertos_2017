@@ -18,3 +18,9 @@ Utilizar os dados do projeto [**BAGA - *Bio Arduino Global Acquisition***](https
 + Validação dos dados
 + Produzir mapas para permitir a interpretação dos dados, bem como tornar-los mais legíveis e úteis.
 
+## Equipa
++ Ana Cristina
++ Ana Rita Melo
++ Ana Silva
++ Hugo Torrinha
++ Hugo Santos
